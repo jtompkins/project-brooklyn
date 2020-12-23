@@ -28,3 +28,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Site Env Vars
+
+| Env Var             | Required | Purpose                                                                        |
+| ------------------- | -------- | ------------------------------------------------------------------------------ |
+| AUTH0_DOMAIN        | Yes      | The domain of the Auth0 application                                            |
+| AUTH0_SECRET        | Yes      | Auth0-provided client secret (DO NOT CHECK IN TO SOURCE CONTROL)               |
+| AUTH0_CLIENT_ID     | Yes      | Auth0-provided client ID (DO NOT CHECK IN TO SOURCE CONTROL)                   |
+| AUTH0_COOKIE_SECRET | Yes      | An arbitrary secret key used in the cookie (DO NOT CHECK IN TO SOURCE CONTROL) |
