@@ -1,0 +1,29 @@
+datasource db {
+    url      = env("DATABASE_URL")
+    provider = "postgresql"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model User {
+    id              Int         @id @default(autoincrement())
+    auth0Id         String      @unique
+    isAdmin         Boolean     @default(false)
+    firstName       String
+    lastName        String
+    website         String?
+    instagram       String?
+    applySwapCredit Boolean     @default(false)
+    createdAt       DateTime    @default(now())
+    Postcards       Postcards[]
+}
+
+model Postcards {
+    id        Int      @id @default(autoincrement())
+    userId    Int
+    s3Url     String
+    createdAt DateTime @default(now())
+    user      User     @relation(fields: [userId], references: [id])
+}

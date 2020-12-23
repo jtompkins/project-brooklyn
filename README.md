@@ -29,6 +29,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## Commands
+
+All commands should be prefixed with `npm run`.
+
+| Command          | Purpose                                                                 | Notes                                                                                                                                 |
+| ---------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `dev`            | Runs a live-updating dev server                                         |                                                                                                                                       |
+| `db:migrate:dev` | Performs a dev DB migration. Uses the `DATABASE_URL` defined in `.env`. | Requires the DB user to be able to [create databases](https://www.prisma.io/docs/concepts/components/prisma-migrate#shadow-database). |
+
 ## Site Env Vars
 
 | Env Var             | Required | Purpose                                                                        |
@@ -37,3 +46,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 | AUTH0_SECRET        | Yes      | Auth0-provided client secret (DO NOT CHECK IN TO SOURCE CONTROL)               |
 | AUTH0_CLIENT_ID     | Yes      | Auth0-provided client ID (DO NOT CHECK IN TO SOURCE CONTROL)                   |
 | AUTH0_COOKIE_SECRET | Yes      | An arbitrary secret key used in the cookie (DO NOT CHECK IN TO SOURCE CONTROL) |
+| DATABASE_URL        | Yes      | The Postgres connection string required by Prisma                              |
